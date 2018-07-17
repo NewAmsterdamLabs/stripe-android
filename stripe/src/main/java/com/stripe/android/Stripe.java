@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.Size;
 import android.support.annotation.VisibleForTesting;
+import android.support.v4.util.ArrayMap;
 
 import com.stripe.android.exception.APIConnectionException;
 import com.stripe.android.exception.APIException;
@@ -21,9 +22,12 @@ import com.stripe.android.model.SourceParams;
 import com.stripe.android.model.StripePaymentSource;
 import com.stripe.android.model.Token;
 
+import java.io.File;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executor;
+
+import okhttp3.OkHttpClient;
 
 import static com.stripe.android.StripeNetworkUtils.hashMapFromBankAccount;
 import static com.stripe.android.StripeNetworkUtils.hashMapFromCard;
@@ -779,6 +783,27 @@ public class Stripe {
         } else {
             task.execute();
         }
+    }
+
+    public String uploadVerificationDocument(File document) {
+        String url = "https://uploads.stripe.com/v1/files";
+        String bearerToken = "Bearer "+mDefaultPublishableKey;
+
+        OkHttp3Helper helper = new OkHttp3Helper(mContext);
+
+        ArrayMap<String, String> formMap = new ArrayMap<>();
+        formMap.put("purpose", "identity_document");
+
+        ArrayMap<String, File> fileMap = new ArrayMap<>();
+        fileMap.put("file", document);
+
+        String result = "";
+        try {
+            result = helper.postMultiPartToServer(url, formMap, fileMap, bearerToken);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 
     private class ResponseWrapper {
