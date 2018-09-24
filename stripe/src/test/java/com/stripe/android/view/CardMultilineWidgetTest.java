@@ -1,8 +1,8 @@
 package com.stripe.android.view;
 
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.design.widget.TextInputLayout;
+import androidx.annotation.NonNull;
+import com.google.android.material.textfield.TextInputLayout;
 import android.view.View;
 import android.widget.LinearLayout;
 

@@ -1,6 +1,6 @@
 package com.stripe.android.view;
 
-import android.support.design.widget.TextInputLayout;
+import com.google.android.material.textfield.TextInputLayout;
 
 import com.stripe.android.BuildConfig;
 import com.stripe.android.R;

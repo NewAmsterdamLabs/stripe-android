@@ -1,7 +1,7 @@
 package com.stripe.android.view;
 
 import android.graphics.Color;
-import android.support.annotation.ColorInt;
+import androidx.annotation.ColorInt;
 
 import com.stripe.android.BuildConfig;
 import com.stripe.android.R;

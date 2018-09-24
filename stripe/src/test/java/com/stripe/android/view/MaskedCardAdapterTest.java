@@ -1,6 +1,6 @@
 package com.stripe.android.view;
 
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.stripe.android.BuildConfig;
 import com.stripe.android.model.Card;
