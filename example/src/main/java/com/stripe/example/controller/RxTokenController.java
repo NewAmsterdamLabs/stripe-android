@@ -1,7 +1,7 @@
 package com.stripe.example.controller;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.widget.Button;
 
 import com.jakewharton.rxbinding.view.RxView;

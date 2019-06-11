@@ -2,8 +2,8 @@ package com.stripe.android.view;
 
 import android.content.Context;
 import android.graphics.Rect;
-import android.support.annotation.VisibleForTesting;
-import android.support.design.widget.TextInputLayout;
+import androidx.annotation.VisibleForTesting;
+import com.google.android.material.textfield.TextInputLayout;
 import android.util.AttributeSet;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;

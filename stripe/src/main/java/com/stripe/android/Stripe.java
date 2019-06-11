@@ -2,11 +2,11 @@ package com.stripe.android;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.Size;
-import android.support.annotation.VisibleForTesting;
-import android.support.v4.util.ArrayMap;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.Size;
+import androidx.annotation.VisibleForTesting;
+import androidx.collection.ArrayMap;
 
 import com.stripe.android.exception.APIConnectionException;
 import com.stripe.android.exception.APIException;
@@ -26,8 +26,6 @@ import java.io.File;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executor;
-
-import okhttp3.OkHttpClient;
 
 import static com.stripe.android.StripeNetworkUtils.hashMapFromBankAccount;
 import static com.stripe.android.StripeNetworkUtils.hashMapFromCard;
