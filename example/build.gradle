@@ -5,7 +5,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
-    implementation 'com.google.android.gms:play-services-wallet:11.4.2'
+    implementation 'com.google.android.gms:play-services-wallet:16.0.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     /* Needed for RxAndroid */
@@ -20,7 +20,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
 
     /* Used to make Retrofit easier and GSON & Rx-compatible*/
-    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 
