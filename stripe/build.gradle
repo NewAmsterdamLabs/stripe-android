@@ -13,13 +13,13 @@ configurations {
 }
 
 dependencies {
-    implementation "androidx.annotation:annotation:1.0.0"
-    implementation "androidx.appcompat:appcompat:1.0.0"
+    implementation "androidx.annotation:annotation:1.1.0"
+    implementation "androidx.appcompat:appcompat:1.0.2"
     // Api for this import because we use reflection to alter TextInputLayout
     api "com.google.android.material:material:1.0.0"
 
-    javadocDeps "androidx.annotation:annotation:1.0.0"
-    javadocDeps "androidx.appcompat:appcompat:1.0.0"
+    javadocDeps "androidx.annotation:annotation:1.1.0"
+    javadocDeps "androidx.appcompat:appcompat:1.0.2"
     javadocDeps "com.google.android.material:material:1.0.0"
     compileOnly "javax.annotation:jsr250-api:${rootProject.ext.javaAnnotationVersion}"
 
@@ -43,6 +43,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    buildTypes {
+        release {
+            debuggable false
+        }
+    }
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -59,7 +64,21 @@ android {
             includeAndroidResources = true
         }
     }
+
+    flavorDimensions "primary"
     productFlavors {
+        local {
+            dimension "primary"
+        }
+        staging {
+            dimension "primary"
+        }
+        retail {
+            dimension "primary"
+        }
+        prod {
+            dimension "primary"
+        }
     }
 }
 
