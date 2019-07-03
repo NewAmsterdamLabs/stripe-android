@@ -27,8 +27,9 @@ dependencies {
     testImplementation "org.mockito:mockito-core:${rootProject.ext.mockitoCoreVersion}"
     testImplementation "org.robolectric:robolectric:${rootProject.ext.robolectricVersion}"
 
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test:rules:1.2.0'
 
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
 }
@@ -37,12 +38,16 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 21
         targetSdkVersion rootProject.ext.compileSdkVersion
         consumerProguardFiles 'proguard-rules.txt'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    useLibrary 'android.test.runner'
+    useLibrary 'android.test.base'
+    useLibrary 'android.test.mock'
+
     buildTypes {
         release {
             debuggable false
