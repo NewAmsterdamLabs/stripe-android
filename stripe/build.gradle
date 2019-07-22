@@ -72,15 +72,15 @@ android {
 
     flavorDimensions "primary"
     productFlavors {
-        local {
-            dimension "primary"
-        }
+//        local {
+//            dimension "primary"
+//        }
         staging {
             dimension "primary"
         }
-        retail {
-            dimension "primary"
-        }
+//        retail {
+//            dimension "primary"
+//        }
         prod {
             dimension "primary"
         }
