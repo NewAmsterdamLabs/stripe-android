@@ -13,6 +13,38 @@ configurations {
 }
 
 dependencies {
+    testImplementation 'com.google.auto.service:auto-service:1.0-rc4'
+
+    // Core library
+    androidTestImplementation "androidx.arch.core:core-testing:2.0.0"
+    androidTestImplementation "androidx.test:core:${rootProject.ext.androidxTestVersion}"
+
+    // AndroidJUnitRunner and JUnit Rules
+    testImplementation "junit:junit:${rootProject.ext.junitVersion}"
+
+    androidTestImplementation "androidx.test:runner:${rootProject.ext.androidxTestVersion}"
+    androidTestImplementation "androidx.test:rules:${rootProject.ext.androidxTestVersion}"
+
+    // Assertions
+    androidTestImplementation "androidx.test.ext:junit:${rootProject.ext.androidxTestExtVersion}"
+    androidTestImplementation "androidx.test.ext:truth:${rootProject.ext.androidxTestExtVersion}"
+    androidTestImplementation "com.google.truth:truth:${rootProject.ext.googleTruthVersion}"
+
+    // Espresso dependencies
+    androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.espressoVersion}"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:${rootProject.ext.espressoVersion}"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:${rootProject.ext.espressoVersion}"
+    androidTestImplementation "androidx.test.espresso:espresso-accessibility:${rootProject.ext.espressoVersion}"
+    androidTestImplementation "androidx.test.espresso:espresso-web:${rootProject.ext.espressoVersion}"
+    androidTestImplementation "androidx.test.espresso.idling:idling-concurrent:${rootProject.ext.espressoVersion}"
+    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:${rootProject.ext.espressoVersion}"
+
+    testImplementation "org.robolectric:robolectric:${rootProject.ext.robolectricVersion}"
+    testImplementation "org.mockito:mockito-core:${rootProject.ext.mockitoVersion}"
+    testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0'
+    androidTestImplementation "org.mockito:mockito-android:${rootProject.ext.mockitoVersion}"
+    androidTestImplementation 'com.google.dexmaker:dexmaker-mockito:1.2'
+
     implementation "androidx.annotation:annotation:1.1.0"
     implementation "androidx.appcompat:appcompat:1.0.2"
     // Api for this import because we use reflection to alter TextInputLayout
@@ -23,14 +55,6 @@ dependencies {
     javadocDeps "com.google.android.material:material:1.0.0"
     compileOnly "javax.annotation:jsr250-api:${rootProject.ext.javaAnnotationVersion}"
 
-    testImplementation "junit:junit:${rootProject.ext.junitVersion}"
-    testImplementation "org.mockito:mockito-core:${rootProject.ext.mockitoCoreVersion}"
-    testImplementation "org.robolectric:robolectric:${rootProject.ext.robolectricVersion}"
-
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test:rules:1.2.0'
-
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
 }
 
@@ -38,6 +62,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
+    javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true
         minSdkVersion 21
         targetSdkVersion rootProject.ext.compileSdkVersion
         consumerProguardFiles 'proguard-rules.txt'
@@ -64,8 +89,8 @@ android {
         }
     }
     testOptions {
+        // Note: without this, all Robolectric tests using BuildConfig will fail.
         unitTests {
-            // Note: without this, all Robolectric tests using BuildConfig will fail.
             includeAndroidResources = true
         }
     }

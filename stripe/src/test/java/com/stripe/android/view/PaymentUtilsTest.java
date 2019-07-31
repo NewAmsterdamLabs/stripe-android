@@ -17,7 +17,7 @@ import static junit.framework.Assert.assertEquals;
  * Test class for {@link PaymentUtils}
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(sdk = 25, constants = BuildConfig.class)
+@Config(sdk = 25)
 public class PaymentUtilsTest {
 
 

@@ -48,8 +48,7 @@ import static org.mockito.Mockito.when;
  * Test class for {@link PaymentMethodsActivity}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class PaymentMethodsActivityTest {
+@Config(sdk = 25)public class PaymentMethodsActivityTest {
 
     static final String TEST_CUSTOMER_OBJECT_WITH_SOURCES =
             "{\n" +

@@ -25,8 +25,7 @@ import static org.junit.Assert.assertTrue;
  * Test class for {@link CountryAutoCompleteTextView}
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class CountryAutoCompleteTextViewTest {
+@Config(sdk = 25)public class CountryAutoCompleteTextViewTest {
 
     private CountryAutoCompleteTextView mCountryAutoCompleteTextView;
     private AutoCompleteTextView mAutoCompleteTextView;

@@ -20,8 +20,7 @@ import static org.junit.Assert.assertNotNull;
  * is no need to otherwise test the behavior.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class IconTextInputLayoutTest {
+@Config(sdk = 25)public class IconTextInputLayoutTest {
 
     @Test
     public void init_successfullyFindsFields() {

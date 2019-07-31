@@ -29,8 +29,7 @@ import static org.mockito.Mockito.verifyZeroInteractions;
  * Test class for {@link StripeEditText}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class StripeEditTextTest {
+@Config(sdk = 25)public class StripeEditTextTest {
 
     @Mock StripeEditText.AfterTextChangedListener mAfterTextChangedListener;
     @Mock StripeEditText.DeleteEmptyListener mDeleteEmptyListener;

@@ -28,8 +28,7 @@ import static org.mockito.Mockito.verify;
  * Test class for {@link MaskedCardAdapter}
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class MaskedCardAdapterTest {
+@Config(sdk = 25)public class MaskedCardAdapterTest {
 
     @Mock RecyclerView.AdapterDataObserver mAdapterDataObserver;
     private MaskedCardAdapter mMaskedCardAdapter;

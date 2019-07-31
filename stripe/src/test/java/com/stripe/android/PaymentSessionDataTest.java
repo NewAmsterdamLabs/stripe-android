@@ -13,8 +13,7 @@ import org.robolectric.annotation.Config;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class PaymentSessionDataTest {
+@Config(sdk = 25)public class PaymentSessionDataTest {
 
     @Test
     public void writeToParcel_withNulls_readsFromParcelCorrectly() {

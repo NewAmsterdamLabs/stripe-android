@@ -43,8 +43,7 @@ import static org.junit.Assert.fail;
  * Test class for {@link Stripe}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class StripeTest {
+@Config(sdk = 25)public class StripeTest {
 
     private static final String DEFAULT_PUBLISHABLE_KEY = "pk_default";
     private static final String DEFAULT_SECRET_KEY = "sk_default";

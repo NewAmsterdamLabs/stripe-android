@@ -23,7 +23,7 @@ import static org.junit.Assert.assertTrue;
  * Test class for {@link ViewUtils}
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(sdk = 25, constants = BuildConfig.class)
+@Config(sdk = 25)
 public class ViewUtilsTest {
 
     ActivityController<CardInputTestActivity> mActivityController;

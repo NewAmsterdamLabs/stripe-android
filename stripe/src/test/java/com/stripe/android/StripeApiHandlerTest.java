@@ -31,7 +31,7 @@ import static org.junit.Assert.fail;
  * Test class for {@link StripeApiHandler}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 23)
+@Config(sdk = 23)
 public class StripeApiHandlerTest {
 
     private static final String FUNCTIONAL_SOURCE_PUBLISHABLE_KEY =

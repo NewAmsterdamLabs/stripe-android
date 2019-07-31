@@ -35,8 +35,7 @@ import static org.junit.Assert.assertTrue;
  * Test class for {@link MaskedCardView}
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class MaskedCardViewTest {
+@Config(sdk = 25)public class MaskedCardViewTest {
 
     private MaskedCardView mMaskedCardView;
     private AppCompatImageView mSelectedImageView;

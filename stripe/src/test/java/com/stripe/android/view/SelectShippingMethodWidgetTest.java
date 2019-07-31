@@ -21,8 +21,7 @@ import static org.junit.Assert.assertEquals;
  * Test for {@link SelectShippingMethodWidget}
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class SelectShippingMethodWidgetTest {
+@Config(sdk = 25)public class SelectShippingMethodWidgetTest {
 
     private SelectShippingMethodWidget mSelectShippingMethodWidget;
     private ShippingMethodAdapter mShippingMethodAdapter;

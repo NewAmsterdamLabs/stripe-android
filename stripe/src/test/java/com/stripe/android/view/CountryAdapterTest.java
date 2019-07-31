@@ -24,8 +24,7 @@ import static org.junit.Assert.assertTrue;
  * Test class for {@link CountryAdapter}
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class CountryAdapterTest {
+@Config(sdk = 25)public class CountryAdapterTest {
 
     private CountryAdapter mCountryAdapter;
 

@@ -50,8 +50,7 @@ import static org.mockito.Mockito.verify;
  * Test class for {@link CardInputWidget}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class CardInputWidgetTest {
+@Config(sdk = 25)public class CardInputWidgetTest {
 
     // Every Card made by the CardInputView should have the card widget token.
     private static final String[] EXPECTED_LOGGING_ARRAY = {LOGGING_TOKEN};

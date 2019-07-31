@@ -56,8 +56,7 @@ import static org.mockito.Mockito.verify;
 import static org.robolectric.Shadows.shadowOf;
 
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class PaymentFlowActivityTest {
+@Config(sdk = 25)public class PaymentFlowActivityTest {
 
     private ActivityController<PaymentFlowActivity> mActivityController;
     private ShadowActivity mShadowActivity;

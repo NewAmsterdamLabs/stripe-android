@@ -51,8 +51,7 @@ import static org.mockito.Mockito.when;
  * Test class for {@link PaymentSession}
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class PaymentSessionTest {
+@Config(sdk = 25)public class PaymentSessionTest {
 
     private TestEphemeralKeyProvider mEphemeralKeyProvider;
 

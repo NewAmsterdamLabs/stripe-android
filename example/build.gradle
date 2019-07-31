@@ -1,4 +1,4 @@
-apply plugin: 'com.android.dynamic-feature'
+apply plugin: 'com.android.application'
 
 dependencies {
     implementation project(':stripe')

@@ -29,8 +29,7 @@ import static org.mockito.Mockito.verifyZeroInteractions;
  * Test class for {@link ExpiryDateEditText}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class ExpiryDateEditTextTest {
+@Config(sdk = 25)public class ExpiryDateEditTextTest {
 
     @Mock ExpiryDateEditText.ExpiryDateEditListener mExpiryDateEditListener;
     private ExpiryDateEditText mExpiryDateEditText;

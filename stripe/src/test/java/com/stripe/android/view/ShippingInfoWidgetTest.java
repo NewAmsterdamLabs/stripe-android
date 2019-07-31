@@ -30,8 +30,7 @@ import static org.junit.Assert.assertTrue;
  * Test class for {@link ShippingInfoWidget}
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class ShippingInfoWidgetTest {
+@Config(sdk = 25)public class ShippingInfoWidgetTest {
 
     private ShippingInfoWidget mShippingInfoWidget;
     private TextInputLayout mAddressLine1TextInputLayout;

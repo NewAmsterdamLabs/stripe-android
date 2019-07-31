@@ -47,8 +47,7 @@ import static org.mockito.Mockito.verify;
  * Test class for {@link CardMultilineWidget}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class CardMultilineWidgetTest {
+@Config(sdk = 25)public class CardMultilineWidgetTest {
 
     // Every Card made by the CardInputView should have the card widget token.
     private static final String[] EXPECTED_LOGGING_ARRAY = { CARD_MULTILINE_TOKEN };

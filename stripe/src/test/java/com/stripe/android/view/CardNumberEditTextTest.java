@@ -34,8 +34,7 @@ import static org.mockito.Mockito.verifyZeroInteractions;
  * Test class for {@link CardNumberEditText}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class CardNumberEditTextTest {
+@Config(sdk = 25)public class CardNumberEditTextTest {
 
     @Mock CardNumberEditText.CardNumberCompleteListener mCardNumberCompleteListener;
     @Mock CardNumberEditText.CardBrandChangeListener mCardBrandChangeListener;

@@ -55,8 +55,7 @@ import static org.mockito.Mockito.when;
  * Test class for {@link CustomerSession}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants=BuildConfig.class, sdk = 25)
-public class CustomerSessionTest {
+@Config(sdk = 25)public class CustomerSessionTest {
 
     public static final String FIRST_SAMPLE_KEY_RAW = "{\n" +
             "  \"id\": \"ephkey_123\",\n" +

@@ -60,8 +60,7 @@ import static org.robolectric.Shadows.shadowOf;
  * Test class for {@link AddSourceActivity}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class AddSourceActivityTest {
+@Config(sdk = 25)public class AddSourceActivityTest {
 
     private ActivityController<AddSourceActivity> mActivityController;
     private CardMultilineWidget mCardMultilineWidget;

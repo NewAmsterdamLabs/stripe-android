@@ -27,8 +27,7 @@ import static org.mockito.Mockito.when;
  * Test class for {@link LoggingUtils}.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 25)
-public class LoggingUtilsTest {
+@Config(sdk = 25)public class LoggingUtilsTest {
 
     private static final String DUMMY_API_KEY = "pk_abc123";
     private static final List<String> EXPECTED_SINGLE_TOKEN_LIST = new ArrayList<>();
