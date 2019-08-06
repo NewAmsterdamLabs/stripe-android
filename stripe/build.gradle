@@ -73,9 +73,8 @@ android {
         androidTestImplementation "androidx.test:core:${rootProject.ext.androidxTestVersion}"
 
         implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
-        kapt 'androidx.lifecycle:lifecycle-common-java8:2.1.0'
-        implementation 'androidx.arch.core:core-common:2.1.0'
-        implementation 'androidx.arch.core:core-runtime:2.1.0'
+        implementation 'androidx.arch.core:core-common:2.0.1'
+        implementation 'androidx.arch.core:core-runtime:2.0.1'
         
         // AndroidJUnitRunner and JUnit Rules
         testImplementation "junit:junit:${rootProject.ext.junitVersion}"
