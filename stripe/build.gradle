@@ -17,7 +17,7 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
     javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true
-        minSdkVersion rootProject.ext.minSdkVersion
+        minSdkVersion 23
         targetSdkVersion rootProject.ext.targetSdkVersion
         consumerProguardFiles 'proguard-rules.txt'
 
